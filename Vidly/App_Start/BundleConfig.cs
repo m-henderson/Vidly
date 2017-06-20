@@ -24,7 +24,7 @@ namespace Vidly
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/yeti-bootstrap.min.css",
+                      "~/Content/yeti-bootstrap.css",
                       "~/Content/site.css"));
         }
     }
