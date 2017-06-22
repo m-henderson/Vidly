@@ -45,7 +45,7 @@ namespace Vidly.Controllers
             {
                 MembershipTypes = membershipTypes
             };
-            return View(viewModel);
+            return View("CustomerForm",viewModel);
         }
 
         [HttpPost]
@@ -69,7 +69,7 @@ namespace Vidly.Controllers
                 Customer = customer,
                 MembershipTypes = _context.MembershipTypes.ToList()
             };
-            return View("New", viewModel);
+            return View("CustomerForm", viewModel);
 
                 
         }
