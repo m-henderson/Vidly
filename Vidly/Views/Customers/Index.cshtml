@@ -30,7 +30,7 @@ else
             {
                 <tr>
                     <th>@customer.Id</th>
-                    <th>@Html.ActionLink(@customer.Name, "Details", "Customers", new { id = @customer.Id }, null)</th>
+                    <th>@Html.ActionLink(@customer.Name, "Edit", "Customers", new { id = @customer.Id }, null)</th>
                     <th>@customer.MembershipType.Name</th>
                 </tr>
             }
