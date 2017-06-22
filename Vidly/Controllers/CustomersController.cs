@@ -23,14 +23,14 @@ namespace Vidly.Controllers
         }
         public ActionResult Index()
         {
-            var customers = _context.Customers.Include(c => c.MembershipType).ToList();
+            var customers = _context.Customers.Include(c => c.MembershipType).ToList(); // why does this work? 
 
             return View(customers);
         }
 
         public ActionResult Details(int id)
         {
-            var customers = _context.Customers.Include(c => c.MembershipType).ToList();
+            var customers = _context.Customers.Include(c => c.MembershipType).SingleOrDefault(c => c.Id == id); // Why does this work? 
 
             if (customers == null)
                 return HttpNotFound();
