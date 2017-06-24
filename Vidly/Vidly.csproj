@@ -252,6 +252,14 @@
     <Compile Include="Migrations\201706220245515_AddNumberAvailalbeToMovie.Designer.cs">
       <DependentUpon>201706220245515_AddNumberAvailalbeToMovie.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706241908231_MakeDateTimeNullable.cs" />
+    <Compile Include="Migrations\201706241908231_MakeDateTimeNullable.Designer.cs">
+      <DependentUpon>201706241908231_MakeDateTimeNullable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706241909227_MakeReleaseDateNullable.cs" />
+    <Compile Include="Migrations\201706241909227_MakeReleaseDateNullable.Designer.cs">
+      <DependentUpon>201706241909227_MakeReleaseDateNullable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -393,6 +401,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706220245515_AddNumberAvailalbeToMovie.resx">
       <DependentUpon>201706220245515_AddNumberAvailalbeToMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706241908231_MakeDateTimeNullable.resx">
+      <DependentUpon>201706241908231_MakeDateTimeNullable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706241909227_MakeReleaseDateNullable.resx">
+      <DependentUpon>201706241909227_MakeReleaseDateNullable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
