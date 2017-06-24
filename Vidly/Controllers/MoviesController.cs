@@ -31,5 +31,15 @@ namespace Vidly.Controllers
 
             return View(movies);
         }
+
+        public ActionResult New()
+        {
+            //var movie = _context.Movies.ToList();
+            //var viewModel = new NewMovieViewModel
+            //{
+
+            //};
+            return View();
+        }
     }
 }
