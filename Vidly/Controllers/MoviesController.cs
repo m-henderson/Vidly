@@ -55,17 +55,17 @@ namespace Vidly.Controllers
             else
             {
                 var movieInDb = _context.Movies.Single(m => m.Id == movie.Id);
-                
 
-
+                movieInDb.Name = movie.Name;
+                movieInDb.ReleaseDate = movie.ReleaseDate;
+                movieInDb.Genres = movie.Genres;
+                movieInDb.NumberInStock = movie.NumberInStock;
             }
 
-            var viewModel = new NewMovieViewModel
-            {
-                Movie = movie
-            };
+            _context.SaveChanges();
 
-            return View("New", viewModel);
+
+            return View("Index", "Movies");
         }
     }
 }

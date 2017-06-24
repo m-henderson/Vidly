@@ -9,7 +9,7 @@ namespace Vidly.Models
         public string Name { get; set; }
         public Genre Genres { get; set; }
         public byte GenreId { get; set; }
-        public DateTime DateAdded { get; set; }
+        public DateTime? DateAdded { get; set; }
 
         [Display(Name = "Release Date")]
         public DateTime ReleaseDate { get; set; }
