@@ -65,7 +65,7 @@ namespace Vidly.Controllers
             _context.SaveChanges();
 
 
-            return View("Index", "Movies");
+            return RedirectToAction("Index", "Movies");
         }
     }
 }
