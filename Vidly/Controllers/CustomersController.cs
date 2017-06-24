@@ -58,6 +58,12 @@ namespace Vidly.Controllers
             else
             {
                 var customerInDb = _context.Customers.Single(c => c.Id == customer.Id);
+
+                customerInDb.Name = customer.Name;
+                customerInDb.Birthdate = customer.Birthdate;
+                customerInDb.MembershipType = customer.MembershipType;
+                customerInDb.IsSubscribedToNewsletter = customer.IsSubscribedToNewsletter;
+
             }
             _context.SaveChanges();
 
