@@ -45,6 +45,7 @@ namespace Vidly.Controllers
             {
                 MembershipTypes = membershipTypes
             };
+
             return View("CustomerForm",viewModel);
         }
 
@@ -82,6 +83,9 @@ namespace Vidly.Controllers
                 Customer = customer,
                 MembershipTypes = _context.MembershipTypes.ToList()
             };
+
+            ViewBag.FormHeader = "Edit a user";
+
             return View("CustomerForm", viewModel);
             
         }

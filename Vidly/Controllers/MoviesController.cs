@@ -42,7 +42,10 @@ namespace Vidly.Controllers
             {
                 Genres = genres
             };
-            return View("new", viewModel);
+
+            ViewBag.Heading = "Add Movie";
+
+            return View("MovieForm", viewModel);
         }
 
         [HttpPost]
@@ -80,7 +83,9 @@ namespace Vidly.Controllers
                 Movie = movie,
                 Genres = _context.Genres.ToList()
             };
-            return View("New", viewModel);
+
+            ViewBag.Heading = "Edit Movie";
+            return View("MovieForm", viewModel);
 
         }
     }
