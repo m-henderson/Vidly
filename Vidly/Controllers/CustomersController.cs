@@ -52,7 +52,7 @@ namespace Vidly.Controllers
         [HttpPost]
         public ActionResult Save(Customer customer)
         {
-            if (!ModelState.IsValid)
+            if (!ModelState.IsValid)  // Validation
             {
                 var viewModel = new NewCustomerViewModel
                 {
