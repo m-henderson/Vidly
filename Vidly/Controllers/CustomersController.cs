@@ -81,6 +81,8 @@ namespace Vidly.Controllers
             }
             _context.SaveChanges();
 
+            ViewBag.FormHeader = "Add New Customer";
+
             return RedirectToAction("Index", "Customers");
         }
 
