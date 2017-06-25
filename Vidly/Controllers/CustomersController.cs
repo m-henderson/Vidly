@@ -63,6 +63,8 @@ namespace Vidly.Controllers
                     MembershipTypes = _context.MembershipTypes.ToList()
                 };
 
+                ViewBag.FormHeader = "Add New Customer";
+
                 return View("CustomerForm", viewModel);
             }
             if (customer.Id == 0)
