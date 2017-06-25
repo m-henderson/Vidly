@@ -33,5 +33,34 @@ namespace Vidly.Controllers.Api
 
             return customer;
         }
+
+        // POST /api/customers
+        [HttpPost]
+        public Customer CreateCustomer(Customer customer)
+        {
+            if (ModelState.IsValid)
+                throw new HttpResponseException(HttpStatusCode.BadRequest);
+
+            _context.Customers.Add(customer);
+            _context.SaveChanges();
+
+            return customer;
+
+
+        }
+
+        // PUT /api/customers/1
+        public void UpdateCustomer(int id, Customer customer)
+        {
+            if (ModelState.IsValid)
+                throw new HttpResponseException(HttpStatusCode.BadRequest);
+
+            var customerInDb = _context.Customers.SingleOrDefault(c => c.Id == id);
+
+            if (customerInDb == null)
+                throw new HttpResponseException(HttpStatusCode.NotFound);
+        }
+
+
     }
 }
