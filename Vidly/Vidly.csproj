@@ -260,6 +260,10 @@
     <Compile Include="Migrations\201706241909227_MakeReleaseDateNullable.Designer.cs">
       <DependentUpon>201706241909227_MakeReleaseDateNullable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706250142424_RemoveRequiredAttribute.cs" />
+    <Compile Include="Migrations\201706250142424_RemoveRequiredAttribute.Designer.cs">
+      <DependentUpon>201706250142424_RemoveRequiredAttribute.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -408,6 +412,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706241909227_MakeReleaseDateNullable.resx">
       <DependentUpon>201706241909227_MakeReleaseDateNullable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706250142424_RemoveRequiredAttribute.resx">
+      <DependentUpon>201706250142424_RemoveRequiredAttribute.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
