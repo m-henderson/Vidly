@@ -264,6 +264,10 @@
     <Compile Include="Migrations\201706250142424_RemoveRequiredAttribute.Designer.cs">
       <DependentUpon>201706250142424_RemoveRequiredAttribute.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706251350215_AddAttributesToMovie.cs" />
+    <Compile Include="Migrations\201706251350215_AddAttributesToMovie.Designer.cs">
+      <DependentUpon>201706251350215_AddAttributesToMovie.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -416,6 +420,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706250142424_RemoveRequiredAttribute.resx">
       <DependentUpon>201706250142424_RemoveRequiredAttribute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706251350215_AddAttributesToMovie.resx">
+      <DependentUpon>201706251350215_AddAttributesToMovie.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
