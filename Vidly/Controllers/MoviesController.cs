@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using Vidly.Models;
 using System.Data.Entity;
 using Vidly.ViewModels;
+using System.Data.Entity.Validation;
 
 namespace Vidly.Controllers
 {
@@ -63,11 +64,16 @@ namespace Vidly.Controllers
                 movieInDb.ReleaseDate = movie.ReleaseDate;
                 movieInDb.Genres = movie.Genres;
                 movieInDb.NumberInStock = movie.NumberInStock;
-
-               
             }
+            try
+            {
 
-            _context.SaveChanges();
+                _context.SaveChanges();
+            }
+            catch (DbEntityValidationException e)
+            {
+                Console.Write(e);
+            }
 
             return RedirectToAction("Index", "Movies");
         }
