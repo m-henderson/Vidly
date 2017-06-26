@@ -12,7 +12,7 @@ using Vidly.App_Start;
 namespace Vidly
 {
     public class MvcApplication : System.Web.HttpApplication
-    {
+    {  
         protected void Application_Start()
         {
 
