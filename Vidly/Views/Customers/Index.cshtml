@@ -17,7 +17,7 @@
 else
 {
 
-    <table class="table table-striped table-hover ">
+    <table class="table table-striped table-hover " id="customers">
         <thead>
             <tr>
                 <th>Customer Id</th>
@@ -34,7 +34,7 @@ else
                     <td>@Html.ActionLink(@customer.Name, "Edit", "Customers", new { id = @customer.Id }, null)</td>
                     <td>@customer.MembershipType.Name</td>
                     <td>
-                        <button class="btn-link">Delete</button>
+                        <button class="btn-link js-delete">Delete</button>
                     </td>
 
                 </tr>
@@ -44,5 +44,14 @@ else
 
 }
   
-
+@section scripts
+{
+    <script>
+        $(document).ready(function() {
+            $("#customers .js-delete").on("click", function() {
+                confirm("Are you sure you wnat to delete this customer?");
+            });
+        });
+    </script>    
+}
 
