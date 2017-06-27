@@ -23,15 +23,20 @@ else
                 <th>Customer Id</th>
                 <th>Customer Name</th>
                 <th>Membership Type</th>
+                <th>Delete</th>
             </tr>
         </thead>
         <tbody>
             @foreach (var customer in Model)
             {
                 <tr>
-                    <th>@customer.Id</th>
-                    <th>@Html.ActionLink(@customer.Name, "Edit", "Customers", new { id = @customer.Id }, null)</th>
-                    <th>@customer.MembershipType.Name</th>
+                    <td>@customer.Id</td>
+                    <td>@Html.ActionLink(@customer.Name, "Edit", "Customers", new { id = @customer.Id }, null)</td>
+                    <td>@customer.MembershipType.Name</td>
+                    <td>
+                        <button class="btn-link">Delete</button>
+                    </td>
+
                 </tr>
             }
         </tbody>
