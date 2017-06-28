@@ -12,7 +12,7 @@ namespace Vidly.Models
     {
         [Required]
         [StringLength(255)]
-        public int EmployeeNumber { get; set; }
+        public string EmployeeNumber { get; set; }
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {

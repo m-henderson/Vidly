@@ -295,6 +295,10 @@
     <Compile Include="Migrations\201706282106059_SeedUsers.Designer.cs">
       <DependentUpon>201706282106059_SeedUsers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706282344311_AddEmployeeNumberToApplicationUser.cs" />
+    <Compile Include="Migrations\201706282344311_AddEmployeeNumberToApplicationUser.Designer.cs">
+      <DependentUpon>201706282344311_AddEmployeeNumberToApplicationUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\1To20NumberOfMoviesInStock.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -636,6 +640,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706282106059_SeedUsers.resx">
       <DependentUpon>201706282106059_SeedUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706282344311_AddEmployeeNumberToApplicationUser.resx">
+      <DependentUpon>201706282344311_AddEmployeeNumberToApplicationUser.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
