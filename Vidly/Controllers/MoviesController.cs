@@ -36,6 +36,7 @@ namespace Vidly.Controllers
             return View(movies);
         }
 
+        [Authorize(Roles = "CanManageMovies")] // overides global filters
         public ActionResult New()
         {
             var genres = _context.Genres.ToList();
