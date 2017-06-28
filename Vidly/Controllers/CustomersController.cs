@@ -9,7 +9,6 @@ using Vidly.ViewModels;
 
 namespace Vidly.Controllers
 {
-    [AllowAnonymous]
     public class CustomersController : Controller
     {
         private ApplicationDbContext _context;
