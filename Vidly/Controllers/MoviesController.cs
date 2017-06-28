@@ -26,6 +26,7 @@ namespace Vidly.Controllers
         {
             if (User.IsInRole("CanManageMovies")) // User gives us access to the current user. 
                 return View("List");
+
             return View("ReadOnlyList");					
 		}
         public ActionResult Details(int id)
