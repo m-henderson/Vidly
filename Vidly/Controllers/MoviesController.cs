@@ -7,6 +7,7 @@ using Vidly.Models;
 using System.Data.Entity;
 using Vidly.ViewModels;
 using System.Data.Entity.Validation;
+using Microsoft.Owin.Security.Provider;
 
 namespace Vidly.Controllers
 {
@@ -23,9 +24,9 @@ namespace Vidly.Controllers
         }
         public ActionResult Index()
         {
-            var movies = _context.Movies.Include(c => c.Genres).ToList();
-
-            return View(movies);							
+            if (User.IsInRole("CanManageMovies")) // User gives us access to the current user. 
+                return View("List");
+            return View("ReadOnlyList");					
 		}
         public ActionResult Details(int id)
         {
