@@ -24,7 +24,7 @@ namespace Vidly.Controllers
         }
         public ActionResult Index()
         {
-            if (User.IsInRole("CanManageMovies")) // User gives us access to the current user. 
+            if (User.IsInRole(RoleName.CanManageMovies)) // User gives us access to the current user. 
                 return View("List");
 
             return View("ReadOnlyList");					
@@ -36,7 +36,7 @@ namespace Vidly.Controllers
             return View(movies);
         }
 
-        [Authorize(Roles = "CanManageMovies")] // overides global filters
+        [Authorize(Roles = RoleName.CanManageMovies)] // overides global filters
         public ActionResult New()
         {
             var genres = _context.Genres.ToList();
