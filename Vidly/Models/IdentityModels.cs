@@ -11,6 +11,7 @@ namespace Vidly.Models
     public class ApplicationUser : IdentityUser
     {
         [Required]
+        [StringLength(255)]
         public int EmployeeNumber { get; set; }
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
