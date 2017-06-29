@@ -30,6 +30,7 @@ namespace Vidly.Controllers.Api
         }
 
         // GET /api/customers/1
+
         public CustomerDto GetCustomer(int id)
         {
             var customer = _context.Customers.SingleOrDefault(c => c.Id == id);
@@ -41,6 +42,7 @@ namespace Vidly.Controllers.Api
         }
 
         // POST /api/customers
+        [Authorize(Roles = RoleName.CanManageMovies)]
         [HttpPost]
         public IHttpActionResult CreateCustomer(CustomerDto customerDto)
         {
@@ -54,6 +56,7 @@ namespace Vidly.Controllers.Api
         }
 
         // PUT /api/customers/1
+        [Authorize(Roles = RoleName.CanManageMovies)]
         [HttpPut]
         public void UpdateCustomer(int id, CustomerDto customerDto)
         {
@@ -71,6 +74,7 @@ namespace Vidly.Controllers.Api
         }
 
         // DELETE /api/customers/1
+        [Authorize(Roles = RoleName.CanManageMovies)]
         [HttpDelete]
         public void DeleteCustomer(int id)
         {
