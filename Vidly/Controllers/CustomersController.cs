@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using Vidly.Models;
 using System.Data.Entity;
+using System.Web.UI;
 using Vidly.ViewModels;
 
 namespace Vidly.Controllers
@@ -23,7 +24,8 @@ namespace Vidly.Controllers
             _context.Dispose();
         }
 
-        [OutputCache]
+        // [OutputCache(Duration = 50, Location = OutputCacheLocation.Server)] // cache on server and can choose a location. if it specific to user I would cache on client and not server
+        [OutputCache(Duration = 0, VaryByParam = "*", NoStore = true)] // disable cache using zero
         public ActionResult Index()
         {
             if (User.IsInRole(RoleName.CanManageMovies))
