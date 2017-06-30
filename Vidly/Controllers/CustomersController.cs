@@ -22,6 +22,8 @@ namespace Vidly.Controllers
         {
             _context.Dispose();
         }
+
+        [OutputCache]
         public ActionResult Index()
         {
             if (User.IsInRole(RoleName.CanManageMovies))
