@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Web;
 using Microsoft.Ajax.Utilities;
 using Vidly.Dtos;
@@ -17,6 +18,7 @@ namespace Vidly.App_Start
             Mapper.CreateMap<CustomerDto, Customer>();
             Mapper.CreateMap<MembershipType, MembershipTypeDto>();
             Mapper.CreateMap<Movie, MovieDto>();
+            Mapper.CreateMap<Rental, NewRentalDto>();
         }
     }
 }
